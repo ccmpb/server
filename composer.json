@@ -8,5 +8,5 @@
             "email": "colin@elusivelabs.com"
         }
     ],
-    "require": {}
+    "bin": ["bin/create"]
 }
