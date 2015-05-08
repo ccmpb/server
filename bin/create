@@ -1,0 +1,45 @@
+#!/usr/bin/env php
+<?php
+
+define('VAGRANT',  __DIR__ . '/../Vagrantfile');
+define('PLAYBOOK', __DIR__ . '/../playbook.yml');
+define('TEMPLATES', __DIR__ . '/../templates');
+
+copy(VAGRANT, getcwd() . '/' . basename(VAGRANT));
+copy(PLAYBOOK, getcwd() . '/' . basename(PLAYBOOK));
+copyRecursive(TEMPLATES, getcwd(). '/' . basename(TEMPLATES));
+
+updateFile(getcwd(). '/.gitignore', basename(VAGRANT));
+updateFile(getcwd(). '/.gitignore', basename(PLAYBOOK));
+updateFile(getcwd(). '/.gitignore', basename(TEMPLATES));
+
+function copyRecursive($src, $dst) { 
+    $dir = opendir($src); 
+    @mkdir($dst); 
+    while(false !== ( $file = readdir($dir)) ) { 
+        if (( $file != '.' ) && ( $file != '..' )) { 
+            if ( is_dir($src . '/' . $file) ) { 
+                copyRecursive($src . '/' . $file,$dst . '/' . $file); 
+            } 
+            else { 
+                copy($src . '/' . $file,$dst . '/' . $file); 
+            } 
+        } 
+    } 
+    closedir($dir); 
+} 
+
+function updateFile($file, $line)
+{
+    // if the file doesn't exist create it
+    if (!file_exists($file)) {
+         $fh = fopen("$file", "w");
+         fclose($fh);
+    }
+
+    $contents = file_get_contents($file);
+
+    if (strpos($contents, $line) === false) {
+        file_put_contents($file, $line . PHP_EOL, FILE_APPEND); 
+    }
+}
