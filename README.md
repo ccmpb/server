@@ -12,10 +12,10 @@
 - Install ubuntu trusty server
 ```sh
 vagrant init ubuntu/trusty64
-```sh
+```
 - Put the contents of this folder into your project root
 - Bring up the server
-```
+```sh
 vagrant up
 ```
 
