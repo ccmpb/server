@@ -1,0 +1,12 @@
+{
+    "name": "colincode/server",
+    "description": "Vagrant & Ansible config for LNMP server",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Colin Campbell",
+            "email": "colin@elusivelabs.com"
+        }
+    ],
+    "require": {}
+}
