@@ -10,6 +10,7 @@
         - nginx
         - mariadb-server
         - php5
+        - php5-mcrypt
         - php5-fpm
     - name: configure nginx
       template: src=templates/nginx.conf dest=/etc/nginx/nginx.conf
