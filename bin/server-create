@@ -9,9 +9,10 @@ copy(VAGRANT, getcwd() . '/' . basename(VAGRANT));
 copy(PLAYBOOK, getcwd() . '/' . basename(PLAYBOOK));
 copyRecursive(TEMPLATES, getcwd(). '/' . basename(TEMPLATES));
 
-updateFile(getcwd(). '/.gitignore', basename(VAGRANT));
-updateFile(getcwd(). '/.gitignore', basename(PLAYBOOK));
-updateFile(getcwd(). '/.gitignore', basename(TEMPLATES));
+updateFile(getcwd(). '/.gitignore', '/' . basename(VAGRANT));
+updateFile(getcwd(). '/.gitignore', '/' . basename(PLAYBOOK));
+updateFile(getcwd(). '/.gitignore', '/' . basename(TEMPLATES));
+updateFile(getcwd(). '/.gitignore', '/.vagrant');
 
 function copyRecursive($src, $dst) { 
     $dir = opendir($src); 
