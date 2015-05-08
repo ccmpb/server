@@ -2,6 +2,7 @@
     "name": "colincode/server",
     "description": "Vagrant & Ansible config for LNMP server",
     "license": "MIT",
+    "version": "dev-master",
     "authors": [
         {
             "name": "Colin Campbell",
