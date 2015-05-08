@@ -10,6 +10,13 @@
 
 #### How to use
 ##### VIA Composer
+- Make sure you have Virtualbox, Vagrant & Ansible installed
+
+- Install ubuntu trusty server
+```sh
+vagrant init ubuntu/trusty64
+```
+
 - Add the repo to your composer.json
 ```js
     "repositories": [
@@ -26,23 +33,18 @@
     }
 
 ```
+
 - Run composer update
 ```sh
 composer update
 ```
+
 - Run server-create in your project root folder
 ```sh
 vendor/bin/server-create
 ```
-##### Traditional
-- Make sure you have Virtualbox, Vagrant & Ansible installed
-- Install ubuntu trusty server
-```sh
-vagrant init ubuntu/trusty64
-```
-- Put the contents of this folder into your project root
+
 - Bring up the server
 ```sh
 vagrant up
 ```
-
