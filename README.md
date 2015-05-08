@@ -3,6 +3,7 @@
 #### Vagrant config with Ansible provisioning for a LNMP server
 #### Included Packages
 - php5
+- php5-mcrypt
 - php-fpm
 - mariadb
 - nginx
