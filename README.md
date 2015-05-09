@@ -1,4 +1,4 @@
-# Vagrant & Ansible Webserver 
+# Composer installable LNMP server 
 
 #### Vagrant config with Ansible provisioning for a LNMP server
 #### Included Packages
