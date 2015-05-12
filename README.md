@@ -51,3 +51,7 @@ vendor/bin/server-create
 ```sh
 vagrant up
 ```
+
+#### .gitignore
+Your .gitignore file will automatically be updated to ignore the Vagrant
+& Ansible setup files/folders
