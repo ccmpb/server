@@ -1,6 +1,6 @@
-# Composer installable LNMP server 
+# Composer installable LEMP server 
 
-#### Vagrant config with Ansible provisioning for a LNMP server
+#### Vagrant config with Ansible provisioning for a LEMP server
 #### Included Packages
 - php5
 - php5-mcrypt
