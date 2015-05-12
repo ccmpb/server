@@ -8,10 +8,13 @@
 - mariadb
 - nginx
 
+#### Requirements
+- [Virtualbox](https://www.virtualbox.org://www.virtualbox.org/)
+- [Vagrant](https://www.vagrantup.com/)
+- [Ansible](http://www.ansible.com/home)
+
 #### How to use
 ##### VIA Composer
-- Make sure you have Virtualbox, Vagrant & Ansible installed
-
 - Install ubuntu trusty server
 ```sh
 vagrant init ubuntu/trusty64
